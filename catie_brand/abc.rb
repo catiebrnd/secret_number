@@ -1,7 +1,7 @@
-number = 4
+secret_number = 4
 num_guesses = 0
 
-puts "What is your name?"
+puts "Hello! What is your name?"
 name = gets
 
 def greet(name)
@@ -10,7 +10,7 @@ end
 
 puts greet(name)
 puts "Let's play a game. Pick a number between 1 and 10. You will have 3 attempts to guess correctly
-If you can guess corrrectly in 3 attempts, you win! Otherwise, you are a loser."
+If you can guess corrrectly in 3 attempts, you win! Otherwise, you are a loser. This game was made by Catie."
 
 times_to_loop = 3
 i=0
@@ -30,5 +30,6 @@ while i < times_to_loop
 end
   if i == 3 && did_user_win != true
       puts 'Sorry, You are out of attempts. You lose.'
+      puts 'The secret number was 4.'
 end
 end
