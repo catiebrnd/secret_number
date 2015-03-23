@@ -17,16 +17,18 @@ i=0
 
 while i < times_to_loop
   puts "Guess a number."
-  guess = gets
-  guess = gets.chomp.to_i
+  guess = gets.strip.to_i
   i += 1
   if guess < 4
     puts "Sorry dude, try a higher number. You have #{3-i} attempts left."
   elsif guess > 4
-    puts "Nah, it's a lower number.You have #{3-i} attempts left.
-  else puts "Boom! You Win!"
+    puts "Nah, it's a lower number.You have #{3-i} attempts left."
+  else
+    puts "Boom! You Win!"
+    did_user_win = true
+    break
 end
-  if i == 3
+  if i == 3 && did_user_win != true
       puts 'Sorry, You are out of attempts. You lose.'
 end
 end
