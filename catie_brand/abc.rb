@@ -12,12 +12,13 @@ puts greet(name)
 puts "Let's play a game. Pick a number between 1 and 10. You will have 3 attempts to guess correctly
 If you can guess corrrectly in 3 attempts, you win! Otherwise, you are a loser."
 
-times_to_loop = 3
+times_to_loop = 4
+i=0
 
-puts "Guess a number."
-guess = gets
-guess = gets.chomp.to_i
 while i < times_to_loop
+  puts "Guess a number."
+  guess = gets
+  guess = gets.chomp.to_i
   i += 1
   if guess < 4
     puts "Sorry dude, try a higher number"
@@ -25,7 +26,7 @@ while i < times_to_loop
     puts "Nah, it's a lower number"
   else puts "Boom! You Win!"
 end
-
-if i == 4
-  puts 'Sorry, You are out of attempts. You lose.'
+  if i == 4
+      puts 'Sorry, You are out of attempts. You lose.'
+end
 end
